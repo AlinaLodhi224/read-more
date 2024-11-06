@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Details with Read More</title>
+  <style>
+    .content-container {
+      width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .item-details {
+      margin-bottom: 10px;
+    }
+    .extra-content {
+      display: none; 
+      margin-top: 10px;
+    }
+    .read-more-btn {
+      color: #0066cc;
+      cursor: pointer;
+      text-decoration: underline;
+      border: none;
+      background: none;
+      font-size: 1em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="content-container">
+  <h2>Item Title</h2>
+  <p class="item-details">
+    This is a brief description of the item. It gives an overview of the item's main features and benefits...
+  </p>
+  <div class="extra-content">
+    <p>
+      Here is the full detail of the item. This section contains additional information about the item, such as specifications, materials, usage tips, and more in-depth descriptions.
+    </p>
+  </div>
+  <button class="read-more-btn" onclick="toggleContent()">Read more</button>
+</div>
+
+<script>
+  function toggleContent() {
+    const extraContent = document.querySelector('.extra-content');
+    const readMoreBtn = document.querySelector('.read-more-btn');
+
+    if (extraContent.style.display === 'none' || extraContent.style.display === '') {
+      extraContent.style.display = 'block';
+      readMoreBtn.textContent = 'Read less';
+    } else {
+      extraContent.style.display = 'none';
+      readMoreBtn.textContent = 'Read more';
+    }
+  }
+</script>
+
+</body>
+</html>
